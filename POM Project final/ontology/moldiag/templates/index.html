@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>MOLDIAG</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/53e4b424e7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark ;">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <a class="navbar-brand" style="font-size:40px;padding-left: 30px; line-height: 52px;font-weight: 700;letter-spacing: -2.5%;" href="#">MOLDIAG</a>
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item active pr-3 pl-3">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active align-left pr-3 pl-3">
+                  <a class="nav-link" href="#">Diseases</a>
+                </li>
+                <li class="nav-item active align-left pr-3 pl-3">
+                    <a class="nav-link" href="#">Genes</a>
+                </li>
+                <li class="nav-item active align-left pr-3 pl-3">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+                <li class="nav-item active align-left pr-3 pl-3">
+                  <button type="button" style="width: 160px;height: 46px;gap: 10px;" class="btn btn-light">Contact Us <i class="fa-solid fa-square-arrow-up-right"></i></button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+    <!-- END OF NAVBAR -->
+
+<!-- ======= Hero landing ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1 style="font-weight: 700; color: #333333; font-size: 64px;line-height: 72px;">Project Ontology on Moldiag (POM)</h1>
+      <p class="p1" style="color: rgb(82, 82, 82);font-weight: 400; font-size: 20px;line-height: 32px;"> The purpose of POM is to facilitate communication on medical terms and to streamline
+        molecular genetic diagnostics to the clinical needs.</p>
+      <p class="p1" style="color: rgb(82, 82, 82);font-weight: 400; font-size: 20px;line-height: 32px;"> By standardizing the terms of medical communication POM aims at development and
+        application of AI tools to facilitate that process by making more precise predictions
+        about the purpose of communication and which diagnostic procedures may serve that
+        purpose.</p>
+      <p class="p1" style="color: rgb(82, 82, 82);font-weight: 400; font-size: 20px;line-height: 32px;"> The project implements a user interface to search, select and group them together of
+        ontology terms.</p>
+      <div>
+        <button style="background-color: rgba(1, 44, 58, 0.826);" type="button" class="btn btn-dark"  >Explore now <i class="fa-solid "></i></button>
+      </div>
+    </div>
+  </section><!-- End landing -->
+  
+<!-- Start of explore -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div style="background-color: rgba(110, 113, 67, 0.5);"  class="container-fluid "></div>
+        <div class="container p-5">
+            <div class="section-title p-5">
+                <h2 class="h4">The Human Phenotype Ontology</h2>
+                <img src="./img/Frame 3.png" class="img-fluid" alt="">
+              </div>
+
+        <div class="row pb-3">
+          <div class="col-lg-4">
+            <img src="./img/Landing-2.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3 class="pt-5" style="font-size: 64px;font-weight: 700;line-height: 72px;">HPO is a hierarchical list of entries of the Human Phenotype Ontology</h3>
+            <p class="pt-5" style="font-size: 20px;line-height: 32px;font-weight: 400;" class="fst-italic">
+                Each term in the HPO describes a phenotypic abnormality, such as Atrial septal defect. The HPO is currently being developed using the medical literature, 
+                Orphanet, DECIPHER, and OMIM. HPO currently contains over 13,000 terms and over 156,000 annotations to hereditary diseases. 
+                The HPO project and others have developed software for 
+                phenotype-driven differential diagnostics, genomic diagnostics, and translational research.
+            </p>
+            <div class="row">
+                
+              <div class="col-lg-1 pb-2 pt-5">
+                  <button style="width: 209px;height: 62px; gap: 10px;background-color: rgba(1, 44, 58, 0.826);" type="button" class="btn btn-dark pd-3 ">Explore now <i class="fa-solid "></i></button>
+             
+                </div>
+            </div>
+
+            
+        </div>
+    </div> 
+    <div class="row">
+        
+            <div class="col-lg-4">
+                <h1 style="font-size: 32px;line-height: 40px;font-weight: 700;"class="pt-4 pb-4">Select HPO Entries</h1>
+                <form method="post">
+                
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button style="width: 209px;height: 62px; gap: 10px;background-color: rgba(1, 44, 58, 0.826);" type= "submit" class="btn btn-dark pd-3 ">Search<i class="fa-solid "></i></button>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <h1 style="font-size: 32px;line-height: 40px;font-weight: 700;"class="pt-4 pb-4">Group HPO Entries</h1>
+                <form method="post">
+                
+                
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button style="width: 209px;height: 62px; gap: 10px;background-color: rgba(1, 44, 58, 0.826);"
+                type="submit" class="btn btn-dark pd-3 ">Find Groups<i class="fa-solid "></i></button>
+                </form> 
+            </div>
+            <div class="col-lg-4">
+                <h1 style="font-size: 32px;line-height: 40px;font-weight: 700;"class="pt-4 pb-4">Translate Results</h1>
+                <form method="post"></form>
+                
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button style="width: 209px;height: 62px; gap: 10px;background-color: rgba(1, 44, 58, 0.826);" type="submit" class="btn btn-dark pd-3 ">Find Results<i class="fa-solid "></i></button>
+                </form>
+            </div>    
+        
+    </div>  
+    
+    </section>
+    <!-- end of explore -->
+
+    <!-- Start of Strength -->
+    <div style="background-color: rgba(216, 236, 242, 0.482);"  class="container-fluid ">
+      
+      <div class="container p-5">
+        <h3 style="font-size: 32px;line-height: 40px;font-weight: 700;"class="pt-4 pb-4">What do we provide to you?</h3>
+        <div class="row">
+          <div class="col-sm">
+            <i style="background-color: rgb(152, 210, 229); width: 56px;height: 56px;text-align: center;padding-top: 20px;" class="fa-solid fa-sliders fa-rotate-90 rounded-circle "></i>
+            <h4 style="font-size: 24px;font-weight: 700;line-height: 34px;"class="pt-4">Range of HPO Entries </h4>
+            <p class="pt-4" style="font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -1.5%;"> 
+                Allows you to explore a hierarchy of diseases to narrow down your search..</p>
+          </div>
+          <div class="col-sm">
+            <i style="background-color: rgb(152, 210, 229); width: 56px;height: 56px;text-align: center;padding-top: 20px;" class="fa-solid fa-wallet rounded-circle"></i>
+            <h4 style="font-size: 24px;font-weight: 700;line-height: 34px;"class="pt-4">Gene test Results</h4>
+            <p class="pt-4" style="font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -1.5%;">Analyse genome sequence data
+              for non-coding variants
+              </p>
+          </div>
+          <div class="col-sm">
+            <i style="background-color: rgb(152, 210, 229); width: 56px;height: 56px;text-align: center;padding-top: 20px;" class="fa-solid fa-award rounded-circle"></i>
+            <h4 style="font-size: 24px;font-weight: 700;line-height: 34px;"class="pt-4">Support</h4>
+            <p class="pt-4" style="font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -1.5%;">
+                provides a structured list of documents on some technical content. 
+                Use this entry if you are looking for some detailed information on sample requirements, 
+                shipment instructions, quality control, and many more.
+              </p>
+          </div>
+          <div class="col-sm">
+            <i style="background-color: rgb(152, 210, 229); width: 56px;height: 56px;text-align: center;padding-top: 20px;" class="fa-solid fa-repeat rounded-circle"></i>
+            <h4  style="font-size: 24px;font-weight: 700;line-height: 34px;" class="pt-4">Webmail</h4>
+            <p class="pt-4" style="font-size: 16px;line-height: 24px;font-weight: 400;letter-spacing: -1.5%;">
+                Use the webmail form for any more specific questions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <!-- End of strength -->
+
+    
+    
+    <!-- Start of About -->
+
+    <div class="row pt-5 pb-5">
+      <div class="col-sm-7 p-5"> 
+        <h1 class="pb-5" style="font-size: 64px;line-height: 72px;font-weight: 700;">About</h1>
+        <p class="pb-5" style="font-size: 20px;line-height: 32px;font-weight: 400;">
+            The easiest way to use this site is by its search function. A search form is available at the top navigation bar from almost every page on this site.
+             Please enter the gene, disease, or symptoms you want to learn about, and browse the results.</p>
+        <div class="container">
+          
+          <div class="row">
+            <div class="col">
+              <h2 style="font-size: 48px;line-height: 68px;font-weight: 700;">300+</h2>
+              <h6 style="font-size: 16px;font-weight: 400;letter-spacing: -1.5%;line-height: 24px;">Success project</h6>
+            </div>
+            <div class="col">
+              <h2 style="font-size: 48px;line-height: 68px;font-weight: 700;">500+</h2>
+              <h6 style="font-size: 16px;font-weight: 400;letter-spacing: -1.5%;line-height: 24px;">Reports generated</h6>
+            </div>
+            <div class="col">
+              <h2 style="font-size: 48px;line-height: 68px;font-weight: 700;">180K</h2>
+              <h6 style="font-size: 16px;font-weight: 400;letter-spacing: -1.5%;line-height: 24px;">Happy customer</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-1 pb-2 pt-5">
+              <button style="width: 209px;height: 62px; gap: 10px;" type="button" class="btn btn-dark pd-3 ">About Us <i class="fa-solid "></i></button>
+          </div>
+        </div> 
+      </div>
+      <!--<div class="col-sm-5">
+        <img sizes="" src="./img/Landing-3.jpg" class="img-fluid" alt="Responsive image">
+      </div>-->
+      
+    </div>
+
+    <!-- End of About -->
+
+    
+
+    <!-- Start of Contact us -->
+
+      <div style="background-color: rgba(1, 44, 58, 0.826);" class="row align-items-start pl-5 pt-5">
+        <div class="col">
+          <h1 style="font-size: 64px;font-weight: 500;line-height: 77.45px;">Let's</h1>
+        </div>
+        
+      </div>
+      <div style="background-color: rgba(1, 44, 58, 0.826);"  class="row align-items-center pb-5 pl-5">
+        <div class="col pt-5">
+          <h1 style="font-size: 120px;font-weight: 500;line-height: 181.53px;">Get in touch</h1>
+        </div>
+        <div class="row pr-5">
+          <div class="col-lg-1 pt-5 pr-5">
+              <button style="width: 160px;height: 46px; gap: 10px;" type="button" class="btn btn-dark pd-3 ">Contact Us <i class="fa-solid "></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- End of Contact Us -->
+
+
+
+    <!-- Start of Footer -->
+
+
+    <!-- Footer -->
+<footer class=" text-lg-start bg-body-tertiary ">
+ 
+  <section class="">
+    <div class="container text-md-start mt-5">
+      <div class="row mt-3">
+        <!-- Company -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4"><h6 style="font-size: 32px;font-weight: 700;line-height: 40px;" class="text-uppercase fw-bold mb-4">
+          COMPANY
+        </h6>
+        <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+          <a href="#!" class="text-reset">About</a>
+        </p>
+        <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+          <a href="#!" class="text-reset">Press</a>
+        </p>
+        <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+          <a href="#!" class="text-reset">Careers</a>
+        </p>
+        <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+          <a href="#!" class="text-reset">Contact</a>
+        </p>
+        
+        </div>
+
+        <!-- Developers -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6  style="font-size: 32px;font-weight: 700;line-height: 40px;"class="text-uppercase fw-bold mb-4">
+            DEVELOPERS
+          </h6>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Documentation</a>
+          </p>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Api Reference</a>
+          </p>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Changelog</a>
+          </p>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Status</a>
+          </p>
+        </div>
+
+
+        <!-- Connect -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6  style="font-size: 32px;font-weight: 700;line-height: 40px;" class="text-uppercase fw-bold mb-4">
+            CONNECT
+          </h6>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Instagram</a>
+          </p>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Whatsapp</a>
+          </p>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Linkedin</a>
+          </p>
+          <p style="font-weight: 400;font-size: 16px;line-height: 24px;letter-spacing: -1.5%;">
+            <a href="#!" class="text-reset">Twitter</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div style=" text-align: right;" class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 ">
+          <!-- Links -->
+          <h6  style="font-size: 32px;font-weight: 700;line-height: 40px;" style="font-weight: 500;line-height: 58.09px;font-size: 48px;" class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>MOLDIAG
+          </h6>
+          <p style="line-height: 30px;font-weight: 400;font-size: 16px;">
+            Laboratory for Molecular Diagnostics
+            Center for Nephrology and Metabolic Disorders
+            Dr. Mato Nagel, MD
+            Albert-Schweitzer-Ring 32
+            D-02943 Weisswasser
+            Germany
+          </p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="https://naveen-portfolio.s3-web.che01.cloud-object-storage.appdomain.cloud/">Venkatharshith</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+
+    <!-- End of Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/53e4b424e7.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
